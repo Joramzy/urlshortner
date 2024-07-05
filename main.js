@@ -26,7 +26,7 @@ app.post("/short-url",((req,res)=>{
     const urlId=nanoid(6);
     // console.log(urlId);
     // console.log(req.hostname);
-    const shortUrl=`http://${req.hostname}:3000/${urlId}`;
+    const shortUrl=`https://${req.hostname}/${urlId}`;
     // console.log(shortUrl);
     const newshorturl=new shortUrlModel({
         longUrl:body.longUrl,
