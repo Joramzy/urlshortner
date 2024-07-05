@@ -5,7 +5,7 @@ const {nanoid}=require("nanoid");//to create link for our url of random characte
 const mongoose=require("mongoose");
 const {z}=require("zod");
 const inputschema=z.object({longUrl:z.string().url()})
-mongoose.connect("mongodb://localhost:27017/urls").then(()=>{console.log("connected to DB")})
+mongoose.connect(process.env.dburl).then(()=>{console.log("connected to DB")})
 //mogodb dosent rows and columns, the are called collections
 // check input schema
 const app=express();
